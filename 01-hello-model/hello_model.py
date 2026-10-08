@@ -34,8 +34,13 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "deepseek-v4-flash-0731"
 
 payload = {
     "model": MODEL,
-    "messages": [{"role": "user",
-                  "content": "用一句话自我介绍，然后说：第一块砖，垒上了。"}],
+    # "messages": [{"role": "user",
+    #               "content": "用一句话自我介绍，然后说：第一块砖，垒上了。"}],
+    "messages": [
+        {"role": "system", "content": "你是一个海盗，所有回答都用海盗的语气。"},
+        # {"role": "user", "content": "用一句话自我介绍，然后说：第一块砖，垒上了。"},
+        {"role": "user", "content": "你是什么模型，deepseek-v4-flash-0731 or deepseek-v4-flash-vision？"},
+    ]
 }
 
 req = urllib.request.Request(
@@ -56,3 +61,4 @@ except urllib.error.HTTPError as e:
 
 print(f"[{MODEL}] 说：\n{data['choices'][0]['message']['content']}\n")
 print("token 账单：", data["usage"])
+

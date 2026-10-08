@@ -1,0 +1,38 @@
+{
+    "choices":[
+        {
+            "index":0,
+            "message":{
+                "role":"assistant",
+                "content":"\n\n<｜DSML｜tool_calls>\n<｜DSML｜invoke name=\"get_current_time\">\n\n</｜DSML｜invoke>\n</｜DSML｜tool_calls>",
+                "reasoning_content":null,
+                "tool_calls":null
+            },
+            "logprobs":null,
+            "finish_reason":"stop",
+            "matched_stop":1
+        }
+    ],
+    "created":1791371863,
+    "id":"532dceffab8d4cee873c293e1bb712f8",
+    "metadata":{
+        "weight_version":"default",
+        "weight_versions":[
+            {
+                "version":"default",
+                "start":0,
+                "end":29
+            }
+        ]
+    },
+    "model":"dsv4-flash-vision",
+    "object":"chat.completion",
+    "request_id":"req_2aef03ad-76e0-4974-9292-005aee9d29a6",
+    "usage":{
+        "prompt_tokens":396,
+        "total_tokens":425,
+        "completion_tokens":29,
+        "prompt_tokens_details":null,
+        "reasoning_tokens":0
+    }
+}

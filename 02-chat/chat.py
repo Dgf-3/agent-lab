@@ -32,6 +32,10 @@ def call(msgs):
     with urllib.request.urlopen(req, timeout=60) as r:
         return json.loads(r.read())
 
+# from openai import OpenAI
+# client = OpenAI(api_key=KEY, base_url=BASE + "/v1")
+# data = client.chat.completions.create(model=MODEL, messages=msgs)
+
 print(f"已连接 {MODEL} | 指令：exit 退出，/reset 清空记忆\n")
 while True:
     try:
